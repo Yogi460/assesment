@@ -10,11 +10,11 @@ class StreamList extends Component {
   }
 
   renderList() {
-    return this.props.streams.map((stream) => {
+    return this.props.streams.map(function(stream) {
       if(stream["first_name"].substr(0,1).toLowerCase() === 'g' || stream["last_name"].substr(0,1).toLowerCase() === 'w'){
         return (
           <div className="item" key={stream.id}>
-            <img className="ui small" src={stream.avatar} />
+            <img alt={stream.first_name} className="ui small" src={stream.avatar} />
             <div>ID: {stream.id}</div>
             <div>First Name: {stream.first_name}</div>
             <div>Last Name: {stream.last_name}</div>
@@ -23,6 +23,7 @@ class StreamList extends Component {
           </div>
         );
       }
+       return [];
     });
   }
 
