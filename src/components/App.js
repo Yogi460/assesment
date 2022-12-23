@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import Header from "./Header";
 import StreamList from "./streams/StreamList";
-import GoogleAuth from "./GoogleAuth"
+
 class App extends Component {
 
 
